@@ -23,7 +23,7 @@ export default function AnalyzePage() {
            >
               <span>Analyze Your Medical Reports Here!</span>
            </motion.div>
-           <h1 className="text-4xl md:text-6xl font-black mb-8 leading-tight uppercase text-maroon">MEDCARE <br />ANALYSIS PORTAL</h1>
+           <h1 className="text-4xl md:text-6xl font-black mb-8 leading-tight   text-maroon">MEDCARE <br />ANALYSIS PORTAL</h1>
            <p className="text-[16px] text-foreground/40 max-w-2xl mx-auto font-medium leading-relaxed mb-12 tracking-wide opacity-80">
              Paste your symptoms or upload your medical report to receive AI-driven insights, explanations, and guided recommendations.
            </p>
@@ -55,7 +55,7 @@ export default function AnalyzePage() {
                  <div className="w-full max-w-6xl flex justify-start mb-10">
                     <button
                       onClick={() => { setResult(null); setPromptText(''); }}
-                      className="group flex items-center space-x-3 px-8 py-3 rounded-md border border-border bg-white font-bold tracking-widest uppercase transition-all hover:bg-maroon hover:text-white"
+                      className="group flex items-center space-x-3 px-8 py-3 rounded-md border border-border bg-white font-bold tracking-widest   transition-all hover:bg-maroon hover:text-white"
                     >
                       <span className="text-xl group-hover:-translate-x-1 transition-transform">←</span>
                       <span className="text-[12px]">NEW ANALYSIS</span>
@@ -78,7 +78,7 @@ export default function AnalyzePage() {
                  <ShieldAlert className="w-6 h-6 text-red-600" />
               </div>
               <div className="space-y-4">
-                 <p className="font-bold text-lg text-red-600 uppercase tracking-tighter">Clinical Precaution Required</p>
+                 <p className="font-bold text-lg text-red-600   tracking-tighter">Clinical Precaution Required</p>
                  <p className="text-[13px] text-red-950/40 font-bold tracking-widest">
                     MediCare.ai provides AI-generated insights for informational purposes only and should not be considered a substitute for professional medical advice.
                  </p>

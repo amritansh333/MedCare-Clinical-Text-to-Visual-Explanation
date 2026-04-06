@@ -53,7 +53,7 @@ export default function AboutPage() {
            </p>
            <div className="flex items-center justify-center space-x-3 mt-8">
               <ShieldCheck className="w-6 h-6 text-green-600" />
-              <span className="text-sm font-semibold uppercase tracking-widest text-green-700 underline">Safety First</span>
+              <span className="text-sm font-semibold   tracking-widest text-green-700 underline">Safety First</span>
            </div>
         </div>
       </div>

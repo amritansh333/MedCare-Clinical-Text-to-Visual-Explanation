@@ -83,7 +83,7 @@
   }
   h1, h2, h3, h4, .waverly-title {
     font-family: var(--font-inter-tight);
-    text-transform: uppercase;
+    text-transform:  ;
     font-weight: 700;
     letter-spacing: 0.02em; /* Less tight */
     line-height: 1.2;
@@ -121,7 +121,7 @@
   color: var(--color-primary-foreground);
   padding: 1rem 2rem;
   font-weight: 700;
-  text-transform: uppercase;
+  text-transform:  ;
   font-size: 0.875rem;
   letter-spacing: 0.05em;
   border-radius: 0.25rem;

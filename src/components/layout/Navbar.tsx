@@ -154,7 +154,7 @@ scrolled
           <X className="w-8 h-8" />
         </button>
 
-        <div className="flex flex-col space-y-8 font-inter-tight font-black text-5xl uppercase tracking-tighter">
+        <div className="flex flex-col space-y-8 font-inter-tight font-black text-5xl   tracking-tighter">
           {navItems.map((item: NavItem, i: number) => (
             <motion.div
               key={item.name}
@@ -182,7 +182,7 @@ scrolled
           <Link
             href="/analyze"
             onClick={(): void => setIsOpen(false)}
-            className="bg-primary text-primary-foreground w-full py-8 text-center text-xl font-black tracking-widest block uppercase shadow-2xl"
+            className="bg-primary text-primary-foreground w-full py-8 text-center text-xl font-black tracking-widest block   shadow-2xl"
           >
             Begin Analysis Protocol
           </Link>

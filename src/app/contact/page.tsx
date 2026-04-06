@@ -41,7 +41,7 @@ export default function ContactPage() {
           ) : (
              <form onSubmit={handleSubmit} className="bg-white p-8 md:p-12 rounded-3xl border border-border shadow-soft space-y-8">
                 <div className="space-y-2">
-                   <label className="text-sm font-bold uppercase tracking-widest text-foreground flex items-center space-x-2">
+                   <label className="text-sm font-bold   tracking-widest text-foreground flex items-center space-x-2">
                       <User className="w-4 h-4 text-primary" />
                       <span>Full Name</span>
                    </label>
@@ -54,7 +54,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="space-y-2">
-                   <label className="text-sm font-bold uppercase tracking-widest text-foreground flex items-center space-x-2">
+                   <label className="text-sm font-bold   tracking-widest text-foreground flex items-center space-x-2">
                       <Mail className="w-4 h-4 text-primary" />
                       <span>Email Address</span>
                    </label>
@@ -67,7 +67,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="space-y-2">
-                   <label className="text-sm font-bold uppercase tracking-widest text-foreground flex items-center space-x-2">
+                   <label className="text-sm font-bold   tracking-widest text-foreground flex items-center space-x-2">
                       <MessageSquare className="w-4 h-4 text-primary" />
                       <span>Your Message</span>
                    </label>

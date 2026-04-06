@@ -7,7 +7,7 @@ import { AnalysisResult } from '@/data/mockData';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 
-const labelStyle = "text-[12px] font-bold uppercase tracking-[0.1em] text-primary/60 mb-3 block";
+const labelStyle = "text-[12px] font-bold   tracking-[0.1em] text-primary/60 mb-3 block";
 
 export function AnalyzeForm({ onResult, onLoading, onPromptText }: { onResult: (result: AnalysisResult) => void, onLoading: (loading: boolean) => void, onPromptText: (text: string) => void }) {
   const [input, setInput] = useState('');
@@ -97,7 +97,7 @@ export function AnalyzeForm({ onResult, onLoading, onPromptText }: { onResult: (
           type="submit"
           disabled={loading || (!input && !file)}
           className={cn(
-            "w-full py-5 rounded-md font-bold text-[15px] uppercase tracking-widest flex items-center justify-center space-x-4 transition-all shadow-md active:scale-95 group",
+            "w-full py-5 rounded-md font-bold text-[15px]   tracking-widest flex items-center justify-center space-x-4 transition-all shadow-md active:scale-95 group",
             loading || (!input && !file) 
               ? "bg-slate-100 text-slate-400 border border-slate-200 shadow-none cursor-not-allowed" 
               : "bg-primary text-white hover:opacity-90"
@@ -143,7 +143,7 @@ export function SkeletonLoader() {
 
        <div className="flex flex-col items-center py-10 opacity-100">
           <Activity className="w-12 h-12 text-primary animate-bounce" />
-          <p className="text-[12px] font-bold text-primary uppercase tracking-[0.5em] mt-6">Deep Context Synthesis in Progress...</p>
+          <p className="text-[12px] font-bold text-primary   tracking-[0.5em] mt-6">Deep Context Synthesis in Progress...</p>
        </div>
     </div>
   );
@@ -160,7 +160,7 @@ export function ResultDisplay({ result, promptText }: { result: AnalysisResult, 
       <div className="bg-white border border-border rounded-lg shadow-2xl overflow-hidden relative">
           {/* User Input Mirror */}
           <div className="p-8 border-b border-border bg-slate-50/50">
-             <span className="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-3 block">User Provided Analysis Data</span>
+             <span className="text-[11px] font-bold text-slate-400   tracking-widest mb-3 block">User Provided Analysis Data</span>
              <p className="user-input-text text-xl font-medium leading-relaxed italic border-l-4 border-slate-200 pl-6 py-1 select-all">
                 {promptText}
              </p>
@@ -172,13 +172,13 @@ export function ResultDisplay({ result, promptText }: { result: AnalysisResult, 
                    <Activity className="w-7 h-7 text-white" />
                 </div>
                 <div className="space-y-1">
-                   <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-maroon/70">Clinical Mapping Result</span>
-                   <h2 className="text-3xl font-black text-black-data uppercase tracking-tight">ANALYSIS COMPLETED</h2>
+                   <span className="text-[11px] font-bold   tracking-[0.2em] text-maroon/70">Clinical Mapping Result</span>
+                   <h2 className="text-3xl font-black text-black-data   tracking-tight">ANALYSIS COMPLETED</h2>
                 </div>
              </div>
              
              <div className={cn(
-                "px-6 py-2 rounded-md font-bold text-[14px] uppercase border",
+                "px-6 py-2 rounded-md font-bold text-[14px]   border",
                 result.riskLevel === 'High' ? "text-red-600 border-red-100 bg-red-50" :
                 result.riskLevel === 'Medium' ? "text-orange-600 border-orange-100 bg-orange-50" :
                 "text-green-600 border-green-100 bg-green-50"
@@ -190,13 +190,13 @@ export function ResultDisplay({ result, promptText }: { result: AnalysisResult, 
           <div className="p-10 lg:p-14 space-y-12">
              <div className="space-y-2">
                 <span className={labelStyle}>Primary Identified Condition</span>
-                <h3 className="text-5xl font-black text-maroon uppercase tracking-tight leading-none">{result.disease}</h3>
+                <h3 className="text-5xl font-black text-maroon   tracking-tight leading-none">{result.disease}</h3>
              </div>
 
              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 border-t border-slate-100 pt-12">
                 <div className="space-y-10">
                    <div className="space-y-4">
-                      <h4 className="text-[12px] font-black flex items-center tracking-widest uppercase gap-3 text-black">
+                      <h4 className="text-[12px] font-black flex items-center tracking-widest   gap-3 text-black">
                          <div className="w-1.5 h-4 bg-maroon" />
                          Diagnostic Summary
                       </h4>
@@ -206,15 +206,15 @@ export function ResultDisplay({ result, promptText }: { result: AnalysisResult, 
                    </div>
 
                    <div className="space-y-4">
-                      <h4 className="text-[12px] font-black flex items-center tracking-widest uppercase gap-3 text-black">
+                      <h4 className="text-[12px] font-black flex items-center tracking-widest   gap-3 text-black">
                          <div className="w-1.5 h-4 bg-maroon" />
                          Management Protocol
                       </h4>
                       <div className="grid gap-3">
                          {result.medication.map((m, i) => (
                             <div key={i} className="flex items-center justify-between p-5 bg-slate-50 border border-slate-100 rounded">
-                               <span className="text-[14px] font-black text-black uppercase tracking-tight">{m.name}</span>
-                               <span className="text-[12px] font-bold text-slate-400 uppercase">{m.dosage}</span>
+                               <span className="text-[14px] font-black text-black   tracking-tight">{m.name}</span>
+                               <span className="text-[12px] font-bold text-slate-400  ">{m.dosage}</span>
                             </div>
                          ))}
                       </div>
@@ -223,7 +223,7 @@ export function ResultDisplay({ result, promptText }: { result: AnalysisResult, 
 
                 <div className="space-y-10">
                    <div className="space-y-5">
-                      <h4 className="text-[12px] font-black flex items-center tracking-widest uppercase gap-3 text-red-600">
+                      <h4 className="text-[12px] font-black flex items-center tracking-widest   gap-3 text-red-600">
                          <AlertTriangle className="w-4 h-4" />
                          Clinical Precautions
                       </h4>
@@ -237,7 +237,7 @@ export function ResultDisplay({ result, promptText }: { result: AnalysisResult, 
                    </div>
 
                    <div className="space-y-5">
-                      <h4 className="text-[12px] font-black flex items-center tracking-widest uppercase gap-3 text-black">
+                      <h4 className="text-[12px] font-black flex items-center tracking-widest   gap-3 text-black">
                          <PlayCircle className="w-4 h-4" />
                          Visual Guidance Node
                       </h4>
